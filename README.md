@@ -1,16 +1,58 @@
-# React + Vite
+# 🏦 Digital Banking Customer Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive, modern, and user-friendly online banking dashboard built with **React.js (Vite)** and **Tailwind CSS**. This project simulates core online banking features such as user authentication, balance tracking, interactive 3D card preview, money transfers, and transaction filtering using local mock data.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo & Links
 
-## React Compiler
+- **Live URL:** [https://your-bank-portal-demo.vercel.app]([https://your-bank-portal-demo.vercel.app](https://royal-banking-portal.vercel.app/))
+- **Repository:** [https://github.com/your-username/digital-banking-portal](https://github.com/g-guhan5/Royal-banking-portal.git)]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **🔐 Mock Authentication:** Secure login screen with client-side validation, show/hide password toggle, loading spinner, and quick demo-login shortcuts.
+- **💳 Interactive CSS 3D Bank Card:** Realistic credit/debit card with a 3D flip animation revealing the CVV and expiry date.
+- **📊 Customer Dashboard:** Quick view of total balance, available balance, masked account numbers, and monthly spending.
+- **💸 Money Transfer Simulation:** Multi-step modal workflow with dynamic balance deduction, beneficiary selection, and balance sufficiency validation.
+- **📋 Transaction Management:**
+  - Real-time search by merchant/description.
+  - Category filter (Food, Bills, Shopping, Salary).
+  - Client-side pagination (5 items per page).
+  - Detailed transaction receipt modal.
+- **📈 Spending Summary:** Visual breakdown of monthly category expenses using intuitive progress bars.
+- **🌓 Dark / Light Mode:** Fully themed UI toggled with a single click and saved to `localStorage`.
+- **📱 Fully Responsive:** Optimized for mobile phones, tablets, and desktop viewports.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js (Vite)
+- **Language:** JavaScript (ES6+)
+- **Styling:** Tailwind CSS, CSS 3D Transforms
+- **Icons:** Lucide React
+- **Deployment:** Vercel 
+
+---
+
+## 📁 Project Structure
+
+src/
+├── components/
+│   ├── Navbar.jsx          # Top navigation with dark mode toggle
+│   ├── Card3D.jsx          # Interactive 3D flip credit card
+│   ├── SummaryCards.jsx    # Balance and quick statistics cards
+│   ├── TransferModal.jsx   # Send money popup with validation
+│   ├── TransactionTable.jsx# Paginated and searchable transactions
+│   └── Modal.jsx           # Reusable generic popup wrapper
+├── pages/
+│   ├── Login.jsx           # Authentication view
+│   └── Dashboard.jsx       # Primary customer portal view
+├── data/
+│   └── mockData.js         # Dummy accounts and transaction records
+├── App.jsx                 # Routing and global layout
+├── index.css               # Tailwind utility imports & base styles
+└── main.jsx                # Vite entry point
