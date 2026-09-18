@@ -14,7 +14,7 @@ export default function Login({ onLoginSuccess }) {
 
 
   const handleFillDemo = () => {
-    setEmail("user@bank.com");
+    setEmail("user@royalbank.com");
     setPassword("password123");
     setErrorMessage("");
   };
@@ -84,7 +84,7 @@ export default function Login({ onLoginSuccess }) {
               <span className="font-semibold block flex items-center gap-1 text-white">
                 <Sparkles className="w-3.5 h-3.5 text-amber-300" /> Demo Credentials:
               </span>
-              <span className="font-mono opacity-90 text-[11px]">user@bank.com / password123</span>
+              <span className="font-mono opacity-90 text-[11px]">user@royalbank.com / password123</span>
             </div>
             <button
               type="button"
