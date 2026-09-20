@@ -148,3 +148,29 @@ Automated Testing: Implement unit and component tests with Vitest and React Test
 Export Formats: Add client-side CSV or PDF statement generation (using jspdf or html2pdf.js).
 Multi-Account Switching: Enable tabbed switching between Checking, Savings, and Credit accounts.
 2FA Verification Modal: Introduce a simulated SMS/Email OTP verification step before finalizing transfers.
+
+### Technical Summary
+
+Component Architecture:
+
+Built using a modular, single-responsibility structure. Reusable primitives (Button, Input, Modal) are kept strictly decoupled from domain-specific business logic (TransferModal, TransactionTable, SpendingChart). This makes components highly composable, easy to test, and predictable to maintain.
+
+State-Management Approach:
+
+Managed using standard React hooks (useState, useEffect) with clean one-way data flow. Core application state—such as live balance, transaction history, and active filters—resides at the page level and cascades down via props. Theme preference (Dark/Light mode) and login session persistence are stored safely in localStorage.
+
+API & Error Handling:
+
+Simulated through an asynchronous Promise-based service layer with artificial latency (300ms–700ms) to mirror real-world network conditions. Every async operation manages explicit lifecycle states (isLoading, error, data), presenting clear user feedback, loading shimmers, and error alerts with retry options.
+
+Responsive-Design Approach:
+
+Engineered mobile-first using Tailwind CSS breakpoints. The layout adapts fluidly across viewports: the transaction data table transitions into a swipe-friendly card list on smaller screens, modal dialogues adjust to mobile sheet patterns, and touch targets follow standard 44px minimum sizing.
+
+Accessibility Considerations:
+
+Developed using semantic HTML5 (<main>, <header>, <section>, <table>), explicit <label> bindings with form inputs, visible keyboard focus indicators (focus:ring-2), and appropriate ARIA attributes for modal overlays and state changes. Maintains WCAG-compliant color contrast in both dark and light themes.
+
+Performance Optimizations:
+
+Powered by Vite for near-instant Hot Module Replacement (HMR) and optimized build bundles. Implemented the interactive 3D card flip using pure CSS transforms (perspective, rotateY) instead of heavy WebGL/Three.js libraries, keeping bundle size minimal and rendering speeds high. Client-side search, filtering, and pagination are executed efficiently in-memory.
