@@ -77,6 +77,7 @@ data: Dynamically populates UI cards and tables upon completion.
 Local Mutations: Money transfers update the in-memory balance and immediately prepend the new record to the active transaction array.
 
 6. Application Architecture
+```text
 The application adopts a feature-oriented, modular architecture with clean separation of concerns:
 
 digital-banking-portal/
@@ -113,7 +114,7 @@ digital-banking-portal/
 ├── package.json
 ├── tailwind.config.js
 └── vite.config.js
-
+```
 7. Key Technical Decisions
 
 Pure CSS 3D Transforms over WebGL / Three.js:
@@ -131,27 +132,19 @@ Search matching, category filtering, and pagination slices are computed dynamica
 8. Assumptions
 
 Single Primary Account: The dashboard reflects a single primary checking/savings account for the active customer session.
-
 Client Session Scope: Login status and theme preference persist across browser reloads via localStorage, but generated transactions exist in runtime memory.
-
 Simulated Financial Transactions: No external payment gateway is connected; transfers strictly validate inputs against the active mock balance.
 
 9. Known Limitations
 
 State Reset on Refresh: Newly created transfer records and modified balances reset to the default mock baseline upon a hard page reload.
-
 Visual Analytics: Expense charts use styled HTML/CSS progress meters rather than heavy third-party charting libraries to maintain minimal bundle weight.
-
 Static Beneficiary Pool: Transfer recipients are chosen from a predefined mock list rather than a full dynamic address book CRUD engine.
 
 10. Potential Future Improvements
 
 Persistent Offline Storage: Connect IndexedDB or localStorage to retain created transfers across page refreshes.
-
 Automated Testing: Implement unit and component tests with Vitest and React Testing Library.
-
 Export Formats: Add client-side CSV or PDF statement generation (using jspdf or html2pdf.js).
-
 Multi-Account Switching: Enable tabbed switching between Checking, Savings, and Credit accounts.
-
 2FA Verification Modal: Introduce a simulated SMS/Email OTP verification step before finalizing transfers.
