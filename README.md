@@ -169,7 +169,7 @@ Engineered mobile-first using Tailwind CSS breakpoints. The layout adapts fluidl
 
 Accessibility Considerations:
 
-Developed using semantic HTML5 (<main>, <header>, <section>, <table>), explicit <label> bindings with form inputs, visible keyboard focus indicators (focus:ring-2), and appropriate ARIA attributes for modal overlays and state changes. Maintains WCAG-compliant color contrast in both dark and light themes.
+Developed using semantic HTML5 (main, header, section, table), explicit <label> bindings with form inputs, visible keyboard focus indicators (focus:ring-2), and appropriate ARIA attributes for modal overlays and state changes. Maintains WCAG-compliant color contrast in both dark and light themes.
 
 Performance Optimizations:
 
