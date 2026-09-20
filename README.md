@@ -6,8 +6,8 @@ A responsive, modern, and user-friendly online banking dashboard built with **Re
 
 ## 🚀 Live Demo & Links
 
-- **Live URL:** [https://royal-banking-portal.vercel.app](https://royal-banking-portal.vercel.app)]
-- **Repository:** [https://github.com/g-guhan5/Royal-banking-portal.git](https://github.com/g-guhan5/Royal-banking-portal.git)]
+- **Live URL:** [https://royal-banking-portal.vercel.app](https://royal-banking-portal.vercel.app)
+- **Repository:** [https://github.com/g-guhan5/Royal-banking-portal.git](https://github.com/g-guhan5/Royal-banking-portal.git)
 
 ---
 
