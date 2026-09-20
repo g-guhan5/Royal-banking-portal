@@ -50,7 +50,7 @@ Follow these prerequisites and steps to set up the codebase on your local machin
    ```bash
    git clone [https://github.com/g-guhan5/Royal-banking-portal.git](https://github.com/g-guhan5/Royal-banking-portal.git)
    
-## 4. How to Run the Project Locally
+### 4. How to Run the Project Locally
 
 1. **Start the local development server:**
    ```bash
@@ -63,7 +63,7 @@ http://localhost:5173
 Log in:
 Use the default test credentials user@bank.com / password123 or click the one-click demo button on the login screen.
 
-5. API / Mock-Data Approach
+### 5. API / Mock-Data Approach
 
 To provide an authentic asynchronous experience without requiring a backend server:
 Central Data Store: All mock entities (user profile, account balances, beneficiaries, and historical credit/debit records) reside in src/data/mockData.js.
@@ -76,7 +76,7 @@ error: Triggers explicit alert banners with retry actions.
 data: Dynamically populates UI cards and tables upon completion.
 Local Mutations: Money transfers update the in-memory balance and immediately prepend the new record to the active transaction array.
 
-6. Application Architecture
+### 6. Application Architecture
 ```text
 The application adopts a feature-oriented, modular architecture with clean separation of concerns:
 
@@ -115,7 +115,7 @@ digital-banking-portal/
 ├── tailwind.config.js
 └── vite.config.js
 ```
-7. Key Technical Decisions
+### 7. Key Technical Decisions
 
 Pure CSS 3D Transforms over WebGL / Three.js:
 Instead of bundling large 3D graphics libraries (Three.js / React Three Fiber), the interactive debit card uses native CSS properties (perspective, transform-style: preserve-3d, and rotateY(180deg)). This provides a visually impressive flip animation with zero performance or bundle overhead.
@@ -129,19 +129,19 @@ Tailwind CSS was chosen to maintain rapid, unified design consistency across spa
 In-Memory Filtering & Pagination:
 Search matching, category filtering, and pagination slices are computed dynamically using standard JavaScript array methods (.filter(), .slice()), guaranteeing instant UI response times.
 
-8. Assumptions
+### 8. Assumptions
 
 Single Primary Account: The dashboard reflects a single primary checking/savings account for the active customer session.
 Client Session Scope: Login status and theme preference persist across browser reloads via localStorage, but generated transactions exist in runtime memory.
 Simulated Financial Transactions: No external payment gateway is connected; transfers strictly validate inputs against the active mock balance.
 
-9. Known Limitations
+### 9. Known Limitations
 
 State Reset on Refresh: Newly created transfer records and modified balances reset to the default mock baseline upon a hard page reload.
 Visual Analytics: Expense charts use styled HTML/CSS progress meters rather than heavy third-party charting libraries to maintain minimal bundle weight.
 Static Beneficiary Pool: Transfer recipients are chosen from a predefined mock list rather than a full dynamic address book CRUD engine.
 
-10. Potential Future Improvements
+### 10. Potential Future Improvements
 
 Persistent Offline Storage: Connect IndexedDB or localStorage to retain created transfers across page refreshes.
 Automated Testing: Implement unit and component tests with Vitest and React Testing Library.
